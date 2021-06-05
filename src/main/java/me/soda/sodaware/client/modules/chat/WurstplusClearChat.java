@@ -4,6 +4,8 @@ package me.soda.sodaware.client.modules.chat;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 
+//mhm clearchat
+
 public class WurstplusClearChat extends WurstplusHack {
     public WurstplusClearChat() {
         super(WurstplusCategory.WURSTPLUS_CHAT);
