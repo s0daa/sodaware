@@ -11,7 +11,7 @@ import net.minecraft.network.play.client.CPacketChatMessage;
 
 import java.util.Random;
 
-// Zero alpine manager.
+// mhm chat suffix
 
 
 public class WurstplusChatSuffix extends WurstplusHack {
