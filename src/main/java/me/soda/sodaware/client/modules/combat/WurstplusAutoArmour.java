@@ -17,6 +17,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+// mhm ato armor
+
 public class WurstplusAutoArmour extends WurstplusHack {
 
     public WurstplusAutoArmour() {

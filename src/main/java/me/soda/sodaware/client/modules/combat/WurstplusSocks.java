@@ -16,6 +16,8 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
 
+//what the fuck is this
+
 public class WurstplusSocks extends WurstplusHack {
 
     // if you use this ur actually bad

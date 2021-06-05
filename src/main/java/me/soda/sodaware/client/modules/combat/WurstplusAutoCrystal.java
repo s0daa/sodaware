@@ -37,6 +37,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
+//mhm place crystal on feet mhm so goodnngs
+
 public class WurstplusAutoCrystal extends WurstplusHack {
 
     public WurstplusAutoCrystal() {

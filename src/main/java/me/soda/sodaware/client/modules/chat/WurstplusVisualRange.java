@@ -11,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import java.util.ArrayList;
 import java.util.List;
 
+//mhm visualrange
 
 public class WurstplusVisualRange extends WurstplusHack {
 

@@ -9,6 +9,8 @@ import me.soda.sodaware.client.util.WurstplusMessageUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 
+//cringe.
+
 public class WurstplusAutoMine extends WurstplusHack {
 
     public WurstplusAutoMine() {

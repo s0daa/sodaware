@@ -12,6 +12,8 @@ import net.minecraft.inventory.ClickType;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 
+//cringe shit chads dont use auto totem
+
 public class WurstplusOffhand extends WurstplusHack {
 
     public WurstplusOffhand() {

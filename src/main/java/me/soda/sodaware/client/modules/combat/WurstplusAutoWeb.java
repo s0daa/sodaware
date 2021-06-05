@@ -14,6 +14,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 
+//just fucking stop this is horrible.
+
 public class WurstplusAutoWeb extends WurstplusHack {
 
     public WurstplusAutoWeb() {

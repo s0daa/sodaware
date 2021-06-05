@@ -11,6 +11,7 @@ import me.zero.alpine.fork.listener.Listener;
 import net.minecraft.network.play.server.SPacketEntityVelocity;
 import net.minecraft.network.play.server.SPacketExplosion;
 
+//mhm take no knockback from getting a huge cock in your anus mhm
 
 public class WurstplusVelocity extends WurstplusHack {
 	public WurstplusVelocity() {

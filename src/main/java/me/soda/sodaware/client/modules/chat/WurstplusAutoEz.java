@@ -17,6 +17,8 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
+//mhm autoez
+
 public class WurstplusAutoEz extends WurstplusHack {
     
     public WurstplusAutoEz() {

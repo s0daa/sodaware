@@ -15,6 +15,8 @@ import net.minecraft.util.text.TextComponentString;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+//mhm chatmods
+
 public final class WurstplusChatMods extends WurstplusHack {
     
     public WurstplusChatMods() {
