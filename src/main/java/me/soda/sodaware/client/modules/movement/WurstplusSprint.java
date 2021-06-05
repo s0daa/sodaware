@@ -4,6 +4,8 @@ import me.soda.sodaware.client.guiscreen.settings.WurstplusSetting;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 
+//mhm vaimok custom code mhm
+
 public class WurstplusSprint extends WurstplusHack {
     
     public WurstplusSprint() {
