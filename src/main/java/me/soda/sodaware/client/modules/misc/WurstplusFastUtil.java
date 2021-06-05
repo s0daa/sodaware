@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemEndCrystal;
 import net.minecraft.item.ItemExpBottle;
 
+//mhm use things fast mhm
 
 public class WurstplusFastUtil extends WurstplusHack {
 
