@@ -13,6 +13,8 @@ import net.minecraft.network.play.client.CPacketPlayerTryUseItem;
 import java.util.HashMap;
 import java.util.Map;
 
+//mhm stop wasting xp mhm
+
 public class WurstplusStopEXP extends WurstplusHack {
     
     public WurstplusStopEXP() {
