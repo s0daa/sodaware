@@ -15,6 +15,8 @@ import net.minecraft.util.math.BlockPos;
 import java.util.HashSet;
 import java.util.Set;
 
+//SWEARING, MEANIE
+
 public class WurstplusFuckedDetector extends WurstplusHack {
     
     public WurstplusFuckedDetector() {
