@@ -25,6 +25,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+//mhm trap pepople to groom mhm
+
 public class WurstplusTrap extends WurstplusHack {
 
     public WurstplusTrap() {
