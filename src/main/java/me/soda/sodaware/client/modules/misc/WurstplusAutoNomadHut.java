@@ -23,6 +23,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3i;
 
+//mhm daddy feetemcee
+
 public class WurstplusAutoNomadHut extends WurstplusHack {
     
     public WurstplusAutoNomadHut() {
