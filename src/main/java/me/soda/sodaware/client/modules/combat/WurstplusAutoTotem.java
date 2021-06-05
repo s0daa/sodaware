@@ -8,6 +8,8 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
 import net.minecraft.item.Item;
 
+//mhm auto totm
+
 public class WurstplusAutoTotem extends WurstplusHack {
 
     public WurstplusAutoTotem() {
