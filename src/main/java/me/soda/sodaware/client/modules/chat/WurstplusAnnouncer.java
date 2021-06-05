@@ -25,6 +25,8 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+// mhm announcer
+
 public class WurstplusAnnouncer extends WurstplusHack {
 
     public WurstplusAnnouncer() {
