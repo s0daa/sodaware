@@ -10,6 +10,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.RayTraceResult;
 import org.lwjgl.input.Mouse;
 
+//mhm frens mhm luckily i have none
+
 public class WurstplusMiddleClickFriends extends WurstplusHack {
     
     public WurstplusMiddleClickFriends() {
