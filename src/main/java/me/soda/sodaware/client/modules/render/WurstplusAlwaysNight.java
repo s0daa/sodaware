@@ -6,6 +6,8 @@ import me.soda.sodaware.client.modules.WurstplusHack;
 import me.zero.alpine.fork.listener.EventHandler;
 import me.zero.alpine.fork.listener.Listener;
 
+//mhm night > day mhm
+
 public class WurstplusAlwaysNight extends WurstplusHack {
 
     public WurstplusAlwaysNight() {
