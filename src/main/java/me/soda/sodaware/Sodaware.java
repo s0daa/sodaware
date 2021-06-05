@@ -100,6 +100,10 @@ public class Sodaware {
 			module_manager.get_module_with_tag("HUD").set_active(false);
 		}
 
+		if (module_manager.get_module_with_tag("RichPresence").is_active()) {
+			module_manager.get_module_with_tag("RichPresence").set_active(false);
+		} //don't turn ON on starting cuz that crashes
+
 		send_minecraft_log("client started");
 		send_minecraft_log("boom");
 

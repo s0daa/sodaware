@@ -108,10 +108,10 @@ public class WurstplusAutoEz extends WurstplusHack {
         if (custom.get_value(true)) {
             message += WurstplusEzMessageUtil.get_message().replace("[", "").replace("]", "");
         } else {
-            message += "you just got nae nae'd by wurst+2";
+            message += "sodaware :eyes_heart:";
         }
         if (discord.get_value(true)) {
-            message += " - discord.gg/wurst";
+            message += "femboy.site/neko";
         }
         mc.player.connection.sendPacket(new CPacketChatMessage(message));
     }
