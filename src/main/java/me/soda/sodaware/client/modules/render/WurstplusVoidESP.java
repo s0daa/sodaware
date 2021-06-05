@@ -18,6 +18,8 @@ import org.lwjgl.opengl.GL11;
 import java.util.ArrayList;
 import java.util.List;
 
+//mhm taste the VOID mhm
+
 public class WurstplusVoidESP extends WurstplusHack {
 
     public WurstplusVoidESP() {
