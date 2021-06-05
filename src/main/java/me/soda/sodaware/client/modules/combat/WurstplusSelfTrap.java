@@ -17,6 +17,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 
+//mhm burrow but cool mhm
+
 public class WurstplusSelfTrap extends WurstplusHack {
     
     public WurstplusSelfTrap() {
