@@ -7,6 +7,8 @@ import me.zero.alpine.fork.listener.EventHandler;
 import me.zero.alpine.fork.listener.Listener;
 import net.minecraft.client.renderer.GlStateManager;
 
+//mhm anti no see mhm
+
 public class WurstplusAntifog extends WurstplusHack {
     
     public WurstplusAntifog() {
