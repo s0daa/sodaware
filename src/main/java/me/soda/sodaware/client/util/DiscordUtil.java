@@ -23,7 +23,7 @@ public class DiscordUtil
         DiscordUtil.presence.details = "nya~ im playing with " + mc.player.getName();
         DiscordUtil.presence.state = "Main Menu";
         DiscordUtil.presence.largeImageKey = "neko";
-        DiscordUtil.presence.largeImageText = NekoHax.CLIENT_VERSION;
+        DiscordUtil.presence.largeImageText = Sodaware.WURSTPLUS_VERSION;
         DiscordUtil.rpc.Discord_UpdatePresence(DiscordUtil.presence);
         new Thread(() -> {
             while (!Thread.currentThread().isInterrupted()) {
