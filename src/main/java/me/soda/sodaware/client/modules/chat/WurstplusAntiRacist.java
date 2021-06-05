@@ -17,7 +17,7 @@ public class WurstplusAntiRacist extends WurstplusHack {
 
     /*
      *    Updated by NathanW because we need to end racism on anarchy servers
-          mhm anti racist
+     *    mhm anti racist
      */
 
     public WurstplusAntiRacist() {
