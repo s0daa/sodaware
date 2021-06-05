@@ -20,6 +20,8 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.stream.Collectors;
 
+//mhm auto bed mhm
+
 public class WurstplusBedAura extends WurstplusHack {
 
     public WurstplusBedAura() {
