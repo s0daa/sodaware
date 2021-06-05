@@ -14,6 +14,8 @@ import net.minecraft.item.ItemStack;
 import java.util.HashMap;
 import java.util.Map;
 
+//mhm too lazy to open inventory mhm
+
 public class WurstplusAutoReplenish extends WurstplusHack {
 
     public WurstplusAutoReplenish() {
