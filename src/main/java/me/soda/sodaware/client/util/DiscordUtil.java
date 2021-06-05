@@ -20,27 +20,27 @@ public class DiscordUtil
         handlers.disconnected = ((var1, var2) -> System.out.println("Discord RPC disconnected, var1: " + String.valueOf(var1) + ", var2: " + var2));
         DiscordUtil.rpc.Discord_Initialize("827716700660826113", handlers, true, "");
         DiscordUtil.presence.startTimestamp = System.currentTimeMillis() / 1000L;
-        DiscordUtil.presence.details = "nya~ im playing with " + mc.player.getName();
+        DiscordUtil.presence.details = "uwu~ im playing with " + mc.player.getName();
         DiscordUtil.presence.state = "Main Menu";
-        DiscordUtil.presence.largeImageKey = "neko";
+        DiscordUtil.presence.largeImageKey = "wurstplus";
         DiscordUtil.presence.largeImageText = Sodaware.WURSTPLUS_VERSION;
         DiscordUtil.rpc.Discord_UpdatePresence(DiscordUtil.presence);
         new Thread(() -> {
             while (!Thread.currentThread().isInterrupted()) {
                 try {
                 	DiscordUtil.rpc.Discord_RunCallbacks();
-                	DiscordUtil.details = "nya~ im playing with " + mc.player.getName();
+                	DiscordUtil.details = "uwu~ im playing with " + mc.player.getName();
                 	DiscordUtil.state = "";
                     if (DiscordUtil.mc.isIntegratedServerRunning()) {
                     	DiscordUtil.state = "Playing on Singleplayer";
                     }
                     else if (DiscordUtil.mc.getCurrentServerData() != null) {
                         if (!DiscordUtil.mc.getCurrentServerData().serverIP.equals("")) {
-                        	DiscordUtil.state = "nekomode on " + DiscordUtil.mc.getCurrentServerData().serverIP;
+                        	DiscordUtil.state = ":3~ " + DiscordUtil.mc.getCurrentServerData().serverIP;
                         }
                     }
                     else {
-                    	DiscordUtil.state = "watching lolipics :eyes:";
+                    	DiscordUtil.state = "watching femboys :3~";
                     }
                     if (!DiscordUtil.details.equals(DiscordUtil.presence.details) || !DiscordUtil.state.equals(DiscordUtil.presence.state)) {
                     	DiscordUtil.presence.startTimestamp = System.currentTimeMillis() / 1000L;
