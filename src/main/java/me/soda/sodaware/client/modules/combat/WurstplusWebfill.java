@@ -22,6 +22,8 @@ import net.minecraft.util.math.Vec3i;
 
 import java.util.ArrayList;
 
+//kill yourself if you use this
+
 public class WurstplusWebfill extends WurstplusHack {
 
     public WurstplusWebfill() {
