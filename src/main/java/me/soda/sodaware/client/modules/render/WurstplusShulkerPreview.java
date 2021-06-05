@@ -3,6 +3,8 @@ package me.soda.sodaware.client.modules.render;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 
+//doesnt work in 99% of serversw
+
 public class WurstplusShulkerPreview extends WurstplusHack {
     
     public WurstplusShulkerPreview() {
