@@ -9,6 +9,8 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
+//mhm auto poopboob mhm
+
 public class WurstplusAutoWither extends WurstplusHack {
 
     public WurstplusAutoWither() {
