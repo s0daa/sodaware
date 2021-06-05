@@ -11,6 +11,7 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.util.math.MathHelper;
 
+//mhm jumping like a fucking retard mhm
 
 public class WurstplusStrafe extends WurstplusHack {
 
