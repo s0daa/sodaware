@@ -8,6 +8,8 @@ import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+//doesnt even work
+
 public class WurstplusViewmodleChanger extends WurstplusHack {
     public WurstplusViewmodleChanger() {
         super(WurstplusCategory.WURSTPLUS_RENDER);
