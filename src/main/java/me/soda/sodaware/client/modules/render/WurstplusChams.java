@@ -22,6 +22,8 @@ import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 
+//mhm things are now  a e s t h e t i c
+
 public class WurstplusChams extends WurstplusHack {
 
     public WurstplusChams() {
