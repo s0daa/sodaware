@@ -4,6 +4,8 @@ import me.soda.sodaware.client.guiscreen.settings.WurstplusSetting;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 
+//mhm sexy cat cape mhm
+
 public class WurstplusCapes extends WurstplusHack {
 
     public WurstplusCapes() {
