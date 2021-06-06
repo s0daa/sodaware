@@ -12,11 +12,11 @@ import java.util.UUID;
 public class WurstplusFakePlayer extends WurstplusHack {
     
     public WurstplusFakePlayer() {
-        super(WurstplusCategory.WURSTPLUS_BETA);
+        super(WurstplusCategory.WURSTPLUS_MISC);
 
 		this.name        = "Fake Player";
 		this.tag         = "FakePlayer";
-		this.description = "hahahaaha what a noob its in beta ahahahahaha";
+		this.description = "HOW TF DID HE NOT DIE!? WTF.";
     }
 
     private EntityOtherPlayerMP fake_player;
