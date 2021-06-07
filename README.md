@@ -1,4 +1,4 @@
 # sodaware
-good client not a ksid i promsie
+good client not a skid i promsie
 
 # esex
