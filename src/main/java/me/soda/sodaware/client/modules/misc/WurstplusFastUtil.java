@@ -16,7 +16,7 @@ public class WurstplusFastUtil extends WurstplusHack {
 
 		this.name        = "Fast Util"; 
 		this.tag         = "FastUtil";
-		this.description = "use things faster";
+		this.description = "zoom";
 	}
 
 	WurstplusSetting fast_place = create("Place","WurstplusFastPlace", false);
