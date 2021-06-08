@@ -29,7 +29,7 @@ public class DiscordUtil
             while (!Thread.currentThread().isInterrupted()) {
                 try {
                 	DiscordUtil.rpc.Discord_RunCallbacks();
-                	DiscordUtil.details = "uwu~ im playing with " + mc.player.getName();
+                	DiscordUtil.details = "uwu~ im playing as " + mc.player.getName();
                 	DiscordUtil.state = ":3";
                     if (DiscordUtil.mc.isIntegratedServerRunning()) {
                     	DiscordUtil.state = "Playing on Singleplayer";
