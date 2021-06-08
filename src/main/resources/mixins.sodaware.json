@@ -2,7 +2,7 @@
 	"required"           : true,
 	"compatibilityLevel" : "JAVA_8",
 	"package"            : "me.soda.sodaware.mixins",
-	"refmap"             : "mixins.wurstplus.refmap.json",
+	"refmap"             : "mixins.sodaware.refmap.json",
 	"mixins"             : [
 		"WurstplusMixinPlayerControllerMP",
 		"WurstplusMixinNetworkManager",

@@ -8,7 +8,7 @@ import net.minecraft.client.Minecraft;
 
 public class DiscordUtil
 {
-    private static final String ClientId = "827716700660826113";
+    private static final String ClientId = "851865852847980563";
     private static final Minecraft mc;
     private static final DiscordRPC rpc;
     public static DiscordRichPresence presence;
@@ -18,9 +18,9 @@ public class DiscordUtil
     public static void init() {
         final DiscordEventHandlers handlers = new DiscordEventHandlers();
         handlers.disconnected = ((var1, var2) -> System.out.println("Discord RPC disconnected, var1: " + String.valueOf(var1) + ", var2: " + var2));
-        DiscordUtil.rpc.Discord_Initialize("827716700660826113", handlers, true, "");
+        DiscordUtil.rpc.Discord_Initialize("851865852847980563", handlers, true, "");
         DiscordUtil.presence.startTimestamp = System.currentTimeMillis() / 1000L;
-        DiscordUtil.presence.details = "uwu~ im playing with " + mc.player.getName();
+        DiscordUtil.presence.details = "uwu~ im playing as " + mc.player.getName();
         DiscordUtil.presence.state = "Main Menu";
         DiscordUtil.presence.largeImageKey = "wurstplus";
         DiscordUtil.presence.largeImageText = Sodaware.WURSTPLUS_VERSION;
@@ -30,7 +30,7 @@ public class DiscordUtil
                 try {
                 	DiscordUtil.rpc.Discord_RunCallbacks();
                 	DiscordUtil.details = "uwu~ im playing with " + mc.player.getName();
-                	DiscordUtil.state = "";
+                	DiscordUtil.state = ":3";
                     if (DiscordUtil.mc.isIntegratedServerRunning()) {
                     	DiscordUtil.state = "Playing on Singleplayer";
                     }
