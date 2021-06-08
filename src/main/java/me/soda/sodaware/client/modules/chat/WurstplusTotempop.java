@@ -23,7 +23,7 @@ public class WurstplusTotempop extends WurstplusHack {
 
 		this.name        = "Totem Pop Counter";
 		this.tag         = "TotemPopCounter";
-		this.description = "dude idk wurst+ is just outdated";
+		this.description = "in da name :3";
     }
 
     public static final HashMap<String, Integer> totem_pop_counter = new HashMap<String, Integer>();
@@ -58,9 +58,9 @@ public class WurstplusTotempop extends WurstplusHack {
                 if (entity == mc.player) return;
 
                 if (WurstplusFriendUtil.isFriend(entity.getName())) {
-                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "dude, " + bold + green + entity.getName() + reset + " has popped " + bold + count + reset + " totems. you should go help them");
+                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "bro, " + bold + green + entity.getName() + reset + " just popped " + bold + count + reset + " totems. go help them!! :3");
                 } else {
-                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "dude, " + bold + red + entity.getName() + reset + " has popped " + bold + count + reset + " totems. what a loser");
+                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "bro, " + bold + red + entity.getName() + reset + " just popped " + bold + count + reset + " totems. what a dummy 3:<");
                 }
 
             }
@@ -85,9 +85,9 @@ public class WurstplusTotempop extends WurstplusHack {
                 if (player == mc.player) continue;
 
                 if (WurstplusFriendUtil.isFriend(player.getName())) {
-                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "dude, " + bold + green + player.getName() + reset + " just fucking DIED after popping " + bold + count + reset + " totems. RIP :pray:");
+                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "bro, " + bold + green + player.getName() + reset + " just died after popping " + bold + count + reset + " totems. 3: ");
                 } else {
-                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "dude, " + bold + red + player.getName() + reset + " just fucking DIED after popping " + bold + count + reset + " totems");
+                    WurstplusMessageUtil.send_client_message( red + "" + bold + " TotemPop " + reset + grey + " > " + reset + "bro, " + bold + red + player.getName() + reset + " just died after popping " + bold + count + reset + " totems!! :3");
                 }
 
             }

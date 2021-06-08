@@ -95,7 +95,7 @@ public class WurstplusConfigManager {
         try {
             writer.write(WurstplusEzMessageUtil.get_message());
         } catch (Exception ignored) {
-            writer.write("test message");
+            writer.write("gg! :3 sodaware owns u~");
         }
 
         writer.close();
@@ -251,7 +251,7 @@ public class WurstplusConfigManager {
                                 break;
                         }
                     } catch (Exception e) {
-                        // TODO : FIX BUGGED LINE
+                        //
                         bugged_lines.add(colune);
                         send_minecraft_log("Error loading '" + value + "' to setting '" + tag + "'");
                         break;
@@ -259,7 +259,7 @@ public class WurstplusConfigManager {
 
 
                 } catch (Exception ignored) {
-                } // TODO : figure out what causes this
+                } //
 
             }
 

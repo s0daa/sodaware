@@ -107,7 +107,7 @@ public class WurstplusAnnouncer extends WurstplusHack {
         } else {
 
             if (event.get_packet() instanceof CPacketUpdateSign) {
-                queue_message("I just updated a sign with some epic text");
+                queue_message("I just made a sign with some text");
             }
 
             if (event.get_packet() instanceof CPacketPlayerTryUseItemOnBlock) {
@@ -185,7 +185,7 @@ public class WurstplusAnnouncer extends WurstplusHack {
     private void send_message(String s) {
         if (suffix.get_value(true)) {
             String i = " \u2763 ";
-            s += i + Sodaware.smoth("sponsored by sodaware two");
+            s += i + Sodaware.smoth("sponsored by sodaware");
         }
         if (smol.get_value(true)) {
             s = Sodaware.smoth(s.toLowerCase());
@@ -236,8 +236,8 @@ public class WurstplusAnnouncer extends WurstplusHack {
                 return;
             }
             sb = new StringBuilder();
-            if (movement_string.in("Aha x")) {
-                ((StringBuilder)sb).append("aha x, I just traveled ");
+            if (movement_string.in("")) {
+                ((StringBuilder)sb).append("I just traveled ");
             }
             if (movement_string.in("FUCK")) {
                 ((StringBuilder)sb).append("FUCK, I just fucking traveled ");
@@ -278,12 +278,12 @@ public class WurstplusAnnouncer extends WurstplusHack {
             distanceTraveled = 0.0;
         }
         if (lostHealth != 0.0f) {
-            sb = "HECK! I just lost " + df.format(lostHealth) + " health D:";
+            sb = "frick I just lost " + df.format(lostHealth) + " health 3:";
             this.queue_message((String)sb);
             lostHealth = 0.0f;
         }
         if (gainedHealth != 0.0f) {
-            sb = "#ezmode I now have " + df.format(gainedHealth) + " more health";
+            sb = "woo I now have " + df.format(gainedHealth) + " more health :3";
             this.queue_message((String)sb);
             gainedHealth = 0.0f;
         }
