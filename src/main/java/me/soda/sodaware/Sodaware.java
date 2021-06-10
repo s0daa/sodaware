@@ -1,6 +1,10 @@
 package me.soda.sodaware;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import me.soda.sodaware.client.auth.FrameUtil;
+import me.soda.sodaware.client.auth.HWIDUtil;
+import me.soda.sodaware.client.auth.NetworkUtil;
+import me.soda.sodaware.client.auth.NoStackTraceThrowable;
 import me.soda.turok.Turok;
 import me.soda.turok.task.Font;
 import me.soda.sodaware.client.event.WurstplusEventHandler;
@@ -15,6 +19,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Mod(modid = "sodaware", version = Sodaware.WURSTPLUS_VERSION)
 public class Sodaware {
@@ -45,8 +52,14 @@ public class Sodaware {
 	public static ChatFormatting g = ChatFormatting.DARK_GRAY;
 	public static ChatFormatting r = ChatFormatting.RESET;
 
+	public static List<String> hwidList = new ArrayList<>();
+	public static final String KEY = "verify";
+	public static final String HWID_URL = "https://pastebin.com/raw/sseEEBxP";
+
 	@Mod.EventHandler
 	public void WurstplusStarting(FMLInitializationEvent event) {
+		Verify();
+
 
 		init_log(WURSTPLUS_NAME);
 
@@ -106,6 +119,19 @@ public class Sodaware {
 
 		send_minecraft_log("client started");
 		send_minecraft_log("boom");
+
+	}
+
+	public void Verify() {
+		//Here we get the HWID List From URL
+		hwidList = NetworkUtil.getHWIDList();
+
+		//Check HWID
+		if(!hwidList.contains(HWIDUtil.getEncryptedHWID(KEY))){
+			//Shutdown client and display message
+			FrameUtil.Display();
+			throw new NoStackTraceThrowable("Verify HWID Failed!");
+		}
 
 	}
 
