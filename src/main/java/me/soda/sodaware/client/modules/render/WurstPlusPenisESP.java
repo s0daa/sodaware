@@ -10,9 +10,9 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.Cylinder;
 import org.lwjgl.util.glu.Sphere;
 
-public class PenisEsp extends WurstplusHack {
+public class WurstPlusPenisESP extends WurstplusHack {
 
-    public PenisEsp(){
+    public WurstPlusPenisESP(){
         super(WurstplusCategory.WURSTPLUS_RENDER);
 
         this.name = "PenisEsp";
