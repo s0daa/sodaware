@@ -30,7 +30,7 @@ public class Sodaware {
 	private static Sodaware MASTER;
 
 	public static final String WURSTPLUS_NAME = "sodaware";
-	public static final String WURSTPLUS_VERSION = "1.1";
+	public static final String WURSTPLUS_VERSION = "1.2";
 	public static final String WURSTPLUS_SIGN = " ";
 
 	public static final int WURSTPLUS_KEY_GUI = Keyboard.KEY_RSHIFT;
