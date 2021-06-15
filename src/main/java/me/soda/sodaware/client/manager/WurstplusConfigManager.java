@@ -437,7 +437,6 @@ public class WurstplusConfigManager {
             } catch (Exception ignored) {}
         }
         br.close();
-
     }
 
     // LOAD & SAVE SETTINGS

@@ -8,7 +8,7 @@ import org.lwjgl.opengl.GL11;
 public class WurstplusLogo extends WurstplusPinnable {
     
     public WurstplusLogo() {
-        super("Logo", "Logo", 1, 0, 0);
+        super("don't use", "Logo", 1, 0, 0);
     }
 
     ResourceLocation r = new ResourceLocation("custom/wurst.png");

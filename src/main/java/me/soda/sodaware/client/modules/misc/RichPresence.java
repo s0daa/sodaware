@@ -2,25 +2,22 @@ package me.soda.sodaware.client.modules.misc;
 
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
-import me.soda.sodaware.client.util.DiscordUtil;
-
-//mhm presence of the wealthy
+import me.soda.sodaware.SodaRPC;
 
 public class RichPresence extends WurstplusHack {
-	
-	public RichPresence() {
-		
+
+    public RichPresence() {
         super(WurstplusCategory.WURSTPLUS_MISC);
-        this.name = "Rich Presence";
+
+        this.name = "RichPresence";
         this.tag = "RichPresence";
-        this.description = "shows discord rpc";
-	}
-    @Override
-    public void enable() {
-        DiscordUtil.init();
+        this.description = "show people how cool you are";
     }
-    @Override
-    public void disable() {
-    	DiscordUtil.shutdown();
+
+    public void enable() {
+        SodaRPC.init();
+        if (mc.player != null) {
+            mc.player.sendChatMessage("let's have sex");
+        }
     }
 }
