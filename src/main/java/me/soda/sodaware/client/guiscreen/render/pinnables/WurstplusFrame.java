@@ -206,7 +206,7 @@ public class WurstplusFrame {
 
 	public void render(int mx, int my, int separate) {
 		float[] tick_color = {
-			(System.currentTimeMillis() % (360 * 32)) / (360f * 32)
+				(System.currentTimeMillis() % (360 * 32)) / (360f * 32)
 		};
 
 		int color_b = Color.HSBtoRGB(tick_color[0], 1, 1);
@@ -227,7 +227,7 @@ public class WurstplusFrame {
 		if (is_moving()) {
 			crush(mx, my);
 		}
-	
+
 		for (WurstplusPinnableButton pinnables_buttons : this.pinnable_button) {
 			pinnables_buttons.set_x(this.x + separate);
 
