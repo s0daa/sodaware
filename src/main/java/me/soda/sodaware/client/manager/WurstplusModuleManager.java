@@ -1,15 +1,21 @@
 package me.soda.sodaware.client.manager;
 
-import me.soda.turok.draw.RenderHelp;
 import me.soda.sodaware.client.event.events.WurstplusEventRender;
-import me.soda.sodaware.client.modules.*;
+import me.soda.sodaware.client.modules.WurstplusCategory;
+import me.soda.sodaware.client.modules.WurstplusClickGUI;
+import me.soda.sodaware.client.modules.WurstplusClickHUD;
+import me.soda.sodaware.client.modules.WurstplusHack;
 import me.soda.sodaware.client.modules.chat.*;
 import me.soda.sodaware.client.modules.combat.*;
 import me.soda.sodaware.client.modules.dev.WurstplusFakePlayer;
 import me.soda.sodaware.client.modules.exploit.*;
 import me.soda.sodaware.client.modules.misc.*;
-import me.soda.sodaware.client.modules.movement.*;
+import me.soda.sodaware.client.modules.movement.WurstPlusAnchor;
+import me.soda.sodaware.client.modules.movement.WurstplusSprint;
+import me.soda.sodaware.client.modules.movement.WurstplusStep;
+import me.soda.sodaware.client.modules.movement.WurstplusStrafe;
 import me.soda.sodaware.client.modules.render.*;
+import me.soda.turok.draw.RenderHelp;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
@@ -42,6 +48,11 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusAntiRacist());
 		add_hack(new WurstplusAutoGroom());
 		add_hack(new WurstplusAnnouncer());
+		add_hack(new Shrug ());
+		add_hack(new StrengthDetect ());
+		add_hack(new PearlNotifier ());
+		add_hack(new ColorPrefix ());
+		add_hack(new AutoExcuse ());
 
 		// Combat.
 		add_hack(new WurstplusCriticals());

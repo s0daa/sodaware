@@ -5,7 +5,6 @@ import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.entity.player.EntityPlayer;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.Cylinder;
 import org.lwjgl.util.glu.Sphere;

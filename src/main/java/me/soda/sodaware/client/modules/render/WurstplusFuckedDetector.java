@@ -1,6 +1,5 @@
 package me.soda.sodaware.client.modules.render;
 
-import me.soda.turok.draw.RenderHelp;
 import me.soda.sodaware.client.event.events.WurstplusEventRender;
 import me.soda.sodaware.client.guiscreen.settings.WurstplusSetting;
 import me.soda.sodaware.client.modules.WurstplusCategory;
@@ -8,6 +7,7 @@ import me.soda.sodaware.client.modules.WurstplusHack;
 import me.soda.sodaware.client.util.WurstplusCrystalUtil;
 import me.soda.sodaware.client.util.WurstplusEntityUtil;
 import me.soda.sodaware.client.util.WurstplusFriendUtil;
+import me.soda.turok.draw.RenderHelp;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;

@@ -1,12 +1,12 @@
 package me.soda.sodaware.client.manager;
 
-import me.soda.turok.draw.RenderHelp;
 import me.soda.sodaware.Sodaware;
 import me.soda.sodaware.client.command.WurstplusCommand;
 import me.soda.sodaware.client.command.WurstplusCommands;
 import me.soda.sodaware.client.event.WurstplusEventBus;
 import me.soda.sodaware.client.event.events.WurstplusEventGameOverlay;
 import me.soda.sodaware.client.util.WurstplusMessageUtil;
+import me.soda.turok.draw.RenderHelp;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;

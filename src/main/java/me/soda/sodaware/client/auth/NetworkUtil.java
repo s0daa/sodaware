@@ -2,6 +2,7 @@ package me.soda.sodaware.client.auth;
 
 import me.soda.sodaware.Sodaware;
 import net.minecraftforge.fml.common.FMLLog;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;

@@ -1,8 +1,8 @@
 package me.soda.sodaware.client.modules.misc;
 
+import me.soda.sodaware.SodaRPC;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
-import me.soda.sodaware.SodaRPC;
 
 public class RichPresence extends WurstplusHack {
 

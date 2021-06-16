@@ -1,7 +1,6 @@
 package me.soda.sodaware;
 
 import club.minnced.discord.rpc.DiscordEventHandlers;
-import me.soda.sodaware.Sodaware;
 import club.minnced.discord.rpc.DiscordRPC;
 import club.minnced.discord.rpc.DiscordRichPresence;
 import net.minecraft.client.Minecraft;

@@ -2,12 +2,12 @@ package me.soda.sodaware.client.guiscreen.render.components.widgets;
 
 
 import me.soda.sodaware.Sodaware;
-import me.soda.turok.values.TurokDouble;
 import me.soda.sodaware.client.guiscreen.render.WurstplusDraw;
 import me.soda.sodaware.client.guiscreen.render.components.WurstplusAbstractWidget;
 import me.soda.sodaware.client.guiscreen.render.components.WurstplusFrame;
 import me.soda.sodaware.client.guiscreen.render.components.WurstplusModuleButton;
 import me.soda.sodaware.client.guiscreen.settings.WurstplusSetting;
+import me.soda.turok.values.TurokDouble;
 
 // Travis.
 

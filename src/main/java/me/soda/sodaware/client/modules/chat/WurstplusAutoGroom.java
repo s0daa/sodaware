@@ -1,13 +1,8 @@
 package me.soda.sodaware.client.modules.chat;
 
-import me.soda.sodaware.client.event.events.WurstplusEventPacket;
 import me.soda.sodaware.client.guiscreen.settings.WurstplusSetting;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
-import me.zero.alpine.fork.listener.EventHandler;
-import me.zero.alpine.fork.listener.Listener;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.network.play.client.CPacketChatMessage;
 
 import java.util.ArrayList;
 import java.util.List;

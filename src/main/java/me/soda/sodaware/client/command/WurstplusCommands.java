@@ -1,7 +1,7 @@
 package me.soda.sodaware.client.command;
 
-import me.soda.turok.values.TurokString;
 import me.soda.sodaware.client.command.commands.*;
+import me.soda.turok.values.TurokString;
 import net.minecraft.util.text.Style;
 
 import java.util.ArrayList;

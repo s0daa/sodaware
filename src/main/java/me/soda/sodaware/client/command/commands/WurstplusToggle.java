@@ -2,8 +2,8 @@ package me.soda.sodaware.client.command.commands;
 
 import me.soda.sodaware.Sodaware;
 import me.soda.sodaware.client.command.WurstplusCommand;
-import me.soda.sodaware.client.modules.WurstplusHack;
 import me.soda.sodaware.client.manager.WurstplusCommandManager;
+import me.soda.sodaware.client.modules.WurstplusHack;
 import me.soda.sodaware.client.util.WurstplusMessageUtil;
 
 public class WurstplusToggle extends WurstplusCommand {
