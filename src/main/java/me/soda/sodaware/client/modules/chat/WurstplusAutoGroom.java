@@ -42,6 +42,14 @@ public class WurstplusAutoGroom extends WurstplusHack {
         chants.add("I'll get you nitro if you send thigh pics");
         chants.add("Hewwo cutie");
         chants.add("AwA Let's have sex");
+        chants.add("Are you a minor");
+        chants.add("Do you have sodaware?");
+        chants.add("Can you lie about being 18");
+        chants.add("Turn camera on");
+        chants.add("Wanna meet irl?");
+        chants.add("Join Voice Call");
+        chants.add("Are you okay with older men?");
+
     }
 
     @Override
