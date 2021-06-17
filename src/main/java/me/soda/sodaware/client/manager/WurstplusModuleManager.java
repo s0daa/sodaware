@@ -5,6 +5,7 @@ import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusClickGUI;
 import me.soda.sodaware.client.modules.WurstplusClickHUD;
 import me.soda.sodaware.client.modules.WurstplusHack;
+import me.soda.sodaware.client.modules.capes.Capes;
 import me.soda.sodaware.client.modules.chat.*;
 import me.soda.sodaware.client.modules.combat.*;
 import me.soda.sodaware.client.modules.dev.WurstplusFakePlayer;
@@ -103,7 +104,7 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusTracers());
 		add_hack(new WurstplusSkyColour());
 		add_hack(new WurstplusChams());
-		add_hack(new WurstplusCapes());
+		add_hack(new Capes());
 		add_hack(new WurstplusAlwaysNight());
 		add_hack(new WurstplusCityEsp());
 		add_hack(new WurstPlusPenisESP());

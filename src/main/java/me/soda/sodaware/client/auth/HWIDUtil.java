@@ -61,7 +61,7 @@ public class HWIDUtil {
             String b = Hashing.sha256().hashString(a, StandardCharsets.UTF_8).toString();
             String c = Hashing.sha512().hashString(b, StandardCharsets.UTF_8).toString();
             String d = Hashing.sha1().hashString(c, StandardCharsets.UTF_8).toString();
-            return Encrypt(d,"spartanB312" + key);
+            return Encrypt(d,"kars0nn" + key);
         } catch (Exception e) {
             e.printStackTrace();
         }

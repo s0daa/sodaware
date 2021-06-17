@@ -16,8 +16,5 @@ public class RichPresence extends WurstplusHack {
 
     public void enable() {
         SodaRPC.init();
-        if (mc.player != null) {
-            mc.player.sendChatMessage("let's have sex");
-        }
     }
 }
