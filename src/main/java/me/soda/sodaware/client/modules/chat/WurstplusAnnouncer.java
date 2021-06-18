@@ -74,7 +74,7 @@ public class WurstplusAnnouncer extends WurstplusHack {
         if (mc.world == null) return;
 
         if (event.get_packet() instanceof SPacketUseBed) {
-            queue_message("I am going to bed now, goodnight");
+            queue_message("I am going to bed now nini uwu");
         }
     });
 
@@ -107,7 +107,7 @@ public class WurstplusAnnouncer extends WurstplusHack {
         } else {
 
             if (event.get_packet() instanceof CPacketUpdateSign) {
-                queue_message("I just made a sign with some text");
+                queue_message("I just made a sign with some text :3");
             }
 
             if (event.get_packet() instanceof CPacketPlayerTryUseItemOnBlock) {
@@ -239,11 +239,11 @@ public class WurstplusAnnouncer extends WurstplusHack {
             if (movement_string.in("")) {
                 ((StringBuilder)sb).append("I just traveled ");
             }
-            if (movement_string.in("FUCK")) {
-                ((StringBuilder)sb).append("FUCK, I just fucking traveled ");
+            if (movement_string.in("frick")) {
+                ((StringBuilder)sb).append("frick, I just fricking traveled ");
             }
-            if (movement_string.in("Leyta")) {
-                ((StringBuilder)sb).append("leyta bitch, I just traveled ");
+            if (movement_string.in("bai")) {
+                ((StringBuilder)sb).append("bai bitch, I just traveled ");
             }
             if (units.in("Feet")) {
                 ((StringBuilder)sb).append(round(distanceTraveled*3.2808,2));
@@ -291,19 +291,19 @@ public class WurstplusAnnouncer extends WurstplusHack {
 
     private void composeEventData() {
         for (Map.Entry<String, Integer> kv : mined_blocks.entrySet()) {
-            this.queue_message("We be mining " + kv.getValue() + " " + kv.getKey() + " out here");
+            this.queue_message("i just mined " + kv.getValue() + " " + kv.getKey() + " :3");
             mined_blocks.remove(kv.getKey());
         }
         for (Map.Entry<String, Integer> kv : placed_blocks.entrySet()) {
-            this.queue_message("We be placing " + kv.getValue() + " " + kv.getKey() + " out here");
+            this.queue_message("i just placed " + kv.getValue() + " " + kv.getKey() + " owo");
             placed_blocks.remove(kv.getKey());
         }
         for (Map.Entry<String, Integer> kv : dropped_items.entrySet()) {
-            this.queue_message("I just dropped " + kv.getValue() + " " + kv.getKey() + ", whoops!");
+            this.queue_message("i just dropped " + kv.getValue() + " " + kv.getKey() + ", UnU");
             dropped_items.remove(kv.getKey());
         }
         for (Map.Entry<String, Integer> kv : consumed_items.entrySet()) {
-            this.queue_message("NOM NOM, I just ate " + kv.getValue() + " " + kv.getKey() + ", yummy");
+            this.queue_message("nom nom, i just ate " + kv.getValue() + " " + kv.getKey() + ", nummy :3");
             consumed_items.remove(kv.getKey());
         }
     }

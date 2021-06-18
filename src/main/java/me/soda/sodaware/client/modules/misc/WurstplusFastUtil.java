@@ -14,7 +14,7 @@ public class WurstplusFastUtil extends WurstplusHack {
 	public WurstplusFastUtil() {
 		super(WurstplusCategory.WURSTPLUS_MISC);
 
-		this.name        = "Fast Util"; 
+		this.name        = "Fast Use";
 		this.tag         = "FastUtil";
 		this.description = "zoom";
 	}

@@ -49,6 +49,9 @@ public class WurstplusAutoGroom extends WurstplusHack {
         chants.add("Wanna meet irl?");
         chants.add("Join Voice Call");
         chants.add("Are you okay with older men?");
+        chants.add("Are you 15 and under?");
+        chants.add("Dont tell anyone about this ;3");
+        chants.add("Do you like boys or girls? :3");
 
     }
 

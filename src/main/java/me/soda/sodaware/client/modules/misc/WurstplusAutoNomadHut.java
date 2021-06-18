@@ -31,7 +31,7 @@ public class WurstplusAutoNomadHut extends WurstplusHack {
 
         super(WurstplusCategory.WURSTPLUS_MISC);
 
-        this.name = "Auto NomadHut";
+        this.name = "Auto NomadHut (dont use)";
         this.tag = "AutoNomadHut";
         this.description = "i fucking hate fit";
     }

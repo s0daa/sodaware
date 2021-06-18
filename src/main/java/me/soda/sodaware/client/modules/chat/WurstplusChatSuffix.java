@@ -33,19 +33,19 @@ public class WurstplusChatSuffix extends WurstplusHack {
 	StringBuilder suffix;
 
 	String[] random_client_name = {
-		"chad",
-		"tabott",
-		"soda",
-		"unco",
-		"kiwi",
-		"xdolf",
-		"eightsixfour",
-		"biggus",
-		"naughty",
-		"jumpy",
-		"chae",
-		"wurst",
-		"buttfuhk"
+		"poophack",
+		"femware",
+		"femhack",
+		"sodahack",
+		"peeware",
+		"estrogenhack.cc",
+		"fartware",
+		"penisware",
+		"anus",
+		"peepee",
+		"owohack",
+		"uwuware",
+		"farthack"
 	};
 
 	String[] random_client_finish = {

@@ -10,7 +10,7 @@ public class NoStackTraceThrowable extends RuntimeException {
 
     @Override
     public String toString() {
-        return "Fuck off nigga!";
+        return "Fuck off";
     }
 
     @Override

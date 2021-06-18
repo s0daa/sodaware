@@ -9,7 +9,7 @@ import net.minecraft.item.ItemStack;
 
 public class WurstplusInventoryPreview extends WurstplusPinnable {
 	public WurstplusInventoryPreview() {
-		super("Inventory Preview", "InventoryPreview", 1, 0, 0);
+		super("Inventory", "InventoryPreview", 1, 0, 0);
 	}
 
 	@Override

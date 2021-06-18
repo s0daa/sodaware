@@ -17,7 +17,7 @@ public class WurstplusMiddleClickFriends extends WurstplusHack {
     public WurstplusMiddleClickFriends() {
         super(WurstplusCategory.WURSTPLUS_MISC);
 
-		this.name        = "Middleclick Friends";
+		this.name        = "Middleclick";
 		this.tag         = "MiddleclickFriends";
 		this.description = "you press button and the world becomes a better place :D";
     }

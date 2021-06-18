@@ -19,7 +19,7 @@ public class ImgurUploader extends WurstplusHack {
     public ImgurUploader() {
         super(WurstplusCategory.WURSTPLUS_MISC);
 
-        this.name = "ImgurUploader";
+        this.name = "AutoImgur";
         this.tag = "ImgurUploader";
         this.description = "uploads images to imgur F2";
     }
