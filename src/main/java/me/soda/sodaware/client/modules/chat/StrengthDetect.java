@@ -20,9 +20,9 @@ public class StrengthDetect
     public
     StrengthDetect () {
         super( WurstplusCategory.WURSTPLUS_CHAT);
-        this.name = "Strenght Detect";
+        this.name = "Strength Detect";
         this.tag = "StrenghtDect";
-        this.description = "detects if someone has strenght";
+        this.description = "detects if someone has strength";
         this.str = Collections.newSetFromMap(new WeakHashMap());
     }
 
