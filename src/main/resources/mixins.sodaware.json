@@ -18,6 +18,7 @@
 		"WurstplusMixinItemRenderer",
 		"WurstplusMixinGuiPlayerTabOverlay",
 		"WurstplusMixinRenderLivingBase",
-		"WurstplusMixinAbstractClientPlayer"
+		"WurstplusMixinAbstractClientPlayer",
+		"MixinGuiMainMenu"
 	]
 }

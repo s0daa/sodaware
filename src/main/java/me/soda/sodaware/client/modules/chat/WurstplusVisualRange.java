@@ -1,6 +1,7 @@
 package me.soda.sodaware.client.modules.chat;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
+import me.soda.sodaware.Sodaware;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 import me.soda.sodaware.client.util.WurstplusFriendUtil;
@@ -8,6 +9,7 @@ import me.soda.sodaware.client.util.WurstplusMessageUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,10 +49,19 @@ public class WurstplusVisualRange extends WurstplusHack {
 				if (!people.contains(name)) {
 					if (WurstplusFriendUtil.isFriend(name)) {
 						WurstplusMessageUtil.send_client_message("i see a cutie called " + ChatFormatting.RESET + ChatFormatting.GREEN + name + ChatFormatting.RESET + " :3");
-					} else {
-						WurstplusMessageUtil.send_client_message("i see someone named " + ChatFormatting.RESET + ChatFormatting.RED + name + ChatFormatting.RESET + ". >:3");
+						people.add(name);
 					}
-					people.add(name);
+					if (!WurstplusFriendUtil.isFriend(name)) {
+						WurstplusMessageUtil.send_client_message("i see a retard named " + ChatFormatting.RESET + ChatFormatting.RED + name + ChatFormatting.RESET + ". >:3");
+						people.add(name);
+					}
+					if (Sodaware.get_hack_manager().get_module_with_tag("DesktopNotifs").is_active()) {
+						if (WurstplusFriendUtil.isFriend(name)) {
+							return;
+						} else {
+							DesktopNotifs.sendNotification(name + " entered visual range.", TrayIcon.MessageType.WARNING);
+						}
+					}
 				}
 			}
 		}

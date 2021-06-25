@@ -14,7 +14,7 @@ public class WurstplusViewmodleChanger extends WurstplusHack {
     public WurstplusViewmodleChanger() {
         super(WurstplusCategory.WURSTPLUS_RENDER);
 
-        this.name = "Custom Viewmodel";
+        this.name = "Viewmodel";
         this.tag = "CustomViewmodel";
         this.description = "anti chad";
     }

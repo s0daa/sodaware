@@ -15,6 +15,4 @@ public class WurstplusDebug extends WurstplusHack {
 		this.description = "used for debugging";
     }
 
-    
-
 }

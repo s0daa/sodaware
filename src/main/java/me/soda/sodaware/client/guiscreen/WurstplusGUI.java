@@ -6,6 +6,7 @@ import me.soda.sodaware.client.modules.WurstplusCategory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 
 import java.util.ArrayList;
 
@@ -56,7 +57,7 @@ public class WurstplusGUI extends GuiScreen {
 
 	public WurstplusGUI() {
 		this.frame   = new ArrayList<>();
-		this.frame_x = 10;
+		this.frame_x = 12;
 
 		this.event_start  = true;
 		this.event_finish = false;
@@ -116,7 +117,7 @@ public class WurstplusGUI extends GuiScreen {
 		for (WurstplusFrame frames : this.frame) {
 			frames.mouse(mx, my, mouse);
 
-			// If left click.
+
 			if (mouse == 0) {
 				if (frames.motion(mx, my) && frames.can()) {
 					frames.does_button_for_do_widgets_can(false);

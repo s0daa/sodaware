@@ -189,6 +189,10 @@ public class WurstplusHack implements Listenable {
 
 	}
 
+	public void onLogout() {
+
+	}
+
 	public String array_detail() {
 		return null;
 	}

@@ -4,8 +4,11 @@ import me.soda.sodaware.Sodaware;
 import me.soda.sodaware.client.guiscreen.render.WurstplusDraw;
 import me.soda.turok.draw.RenderHelp;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.opengl.GL11;
+
+import java.io.IOException;
 
 // Travis.
 
@@ -40,8 +43,8 @@ public class WurstplusPinnable {
 		this.x = x;
 		this.y = y;
 
-		this.width  = 1;
-		this.height = 10;
+		this.width  = 4;
+		this.height = 13;
 
 		this.move = false;
 	}
@@ -248,4 +251,5 @@ public class WurstplusPinnable {
 	protected boolean is_on_gui() {
 		return Sodaware.click_hud.on_gui;
 	}
+
 }

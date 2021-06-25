@@ -29,9 +29,9 @@ public class WurstplusUser extends WurstplusPinnable {
 		String line;
 
 		if (time >= 0 && time < 12) {
-			line = "Morning, " + ChatFormatting.GOLD + ChatFormatting.BOLD + mc.player.getName() + ChatFormatting.RESET + "uwu~";
+			line = "Morning, " + ChatFormatting.GOLD + ChatFormatting.BOLD + mc.player.getName() + ChatFormatting.RESET + " uwu~";
 		} else if (time >= 12 && time < 16) {
-			line = "Afternoon, " + ChatFormatting.GOLD + ChatFormatting.BOLD +  mc.player.getName() + ChatFormatting.RESET + "uwu~";
+			line = "Afternoon, " + ChatFormatting.GOLD + ChatFormatting.BOLD +  mc.player.getName() + ChatFormatting.RESET + " uwu~";
 		} else if (time >= 16 && time < 24) {
 			line = "Evening, " + ChatFormatting.GOLD + ChatFormatting.BOLD +  mc.player.getName() + ChatFormatting.RESET + " uwu~";
 		} else {

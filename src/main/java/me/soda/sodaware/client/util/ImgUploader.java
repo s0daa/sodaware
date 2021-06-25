@@ -20,6 +20,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import me.soda.sodaware.Sodaware;
+import me.soda.sodaware.client.modules.misc.ImgurUploader;
 import net.minecraft.client.Minecraft;
 
 public class ImgUploader implements Runnable {
@@ -31,23 +33,27 @@ public class ImgUploader implements Runnable {
     }
 
     public void run() {
-        Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Uploading image...", true);
+        if(Sodaware.isOnline()){
+            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Uploading image...", true);
 
-        try {
-            JsonElement jelement = new JsonParser().parse(getImgurContent("22835aafce1a83e",img));
-            JsonObject  jobject = jelement.getAsJsonObject();
-            jobject = jobject.getAsJsonObject("data");
+            try {
+                JsonElement jelement = new JsonParser().parse(getImgurContent("22835aafce1a83e",img));
+                JsonObject  jobject = jelement.getAsJsonObject();
+                jobject = jobject.getAsJsonObject("data");
 
-            StringSelection selection = new StringSelection(jobject.get("link").toString().replaceAll("\"", ""));
-            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-            clipboard.setContents(selection, selection);
+                StringSelection selection = new StringSelection(jobject.get("link").toString().replaceAll("\"", ""));
+                Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                clipboard.setContents(selection, selection);
 
-            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Copied to clipboard!", false);
+                Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Copied to clipboard!", false);
 
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-            WurstplusMessageUtil.send_client_message("Upload FAILED bitch!");
+            }
+            catch(Exception e) {
+                e.printStackTrace();
+                WurstplusMessageUtil.send_client_message("Upload FAILED bitch!");
+            }
+        } else {
+            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Not connected to the internet!", false);
         }
 
     }

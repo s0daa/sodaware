@@ -112,6 +112,7 @@ public class WurstplusSetting {
 		}
 	}
 
+
 	public boolean is_info() {
 		return this.name.equalsIgnoreCase("info");
 	}

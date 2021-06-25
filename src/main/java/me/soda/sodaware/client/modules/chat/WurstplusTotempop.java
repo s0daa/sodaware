@@ -21,7 +21,7 @@ public class WurstplusTotempop extends WurstplusHack {
     public WurstplusTotempop() {
 		super(WurstplusCategory.WURSTPLUS_CHAT);
 
-		this.name        = "Totem Pop Counter";
+		this.name        = "Pop Counter";
 		this.tag         = "TotemPopCounter";
 		this.description = "in da name :3";
     }

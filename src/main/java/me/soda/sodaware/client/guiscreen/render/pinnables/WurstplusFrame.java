@@ -82,7 +82,7 @@ public class WurstplusFrame {
 			count++;
 
 			if (count >= size) {
-				this.height += 5;
+				this.height += 6;
 			} else {
 				this.height += 10 + 2;
 			}

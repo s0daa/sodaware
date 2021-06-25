@@ -1,16 +1,15 @@
 package me.soda.sodaware;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
-import me.soda.sodaware.client.auth.FrameUtil;
-import me.soda.sodaware.client.auth.HWIDUtil;
-import me.soda.sodaware.client.auth.NetworkUtil;
-import me.soda.sodaware.client.auth.NoStackTraceThrowable;
+import me.soda.sodaware.client.auth.*;
 import me.soda.sodaware.client.event.WurstplusEventHandler;
 import me.soda.sodaware.client.event.WurstplusEventRegister;
 import me.soda.sodaware.client.guiscreen.WurstplusGUI;
 import me.soda.sodaware.client.guiscreen.WurstplusHUD;
 import me.soda.sodaware.client.manager.*;
 import me.soda.sodaware.client.util.DiscordUtil;
+import me.soda.sodaware.client.util.GLSLSandboxShader;
+import me.soda.sodaware.client.util.WurstplusJson;
 import me.soda.turok.Turok;
 import me.soda.turok.task.Font;
 import net.minecraft.client.Minecraft;
@@ -19,41 +18,60 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.lwjgl.input.Keyboard;
+import org.json.JSONObject;
 import org.lwjgl.opengl.Display;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 @Mod(modid = "sodaware", version = "1.6")
 public class Sodaware
 {
+	public static GLSLSandboxShader backgroundShader;
+	public static long initTime;
+	public static Sodaware INSTANCE;
 	@Mod.Instance
 	private static Sodaware MASTER;
 	public static final String WURSTPLUS_NAME = "sodaware";
-	public static final String WURSTPLUS_VERSION = "1.6";
+	public static final String WURSTPLUS_VERSION = "2.0";
 	public static final String WURSTPLUS_SIGN = " ";
 	public static final int WURSTPLUS_KEY_GUI = 54;
 	public static final int WURSTPLUS_KEY_DELETE = 211;
 	public static final int WURSTPLUS_KEY_GUI_ESCAPE = 1;
 	public static Logger wurstplus_register_log;
-	public static final String CAPES_JSON = "https://raw.githubusercontent.com/kars0nn/sodaAssets/main/capes.json";
-	public static final String DONATORS_JSON = "https://raw.githubusercontent.com/kars0nn/sodaAssets/main/users.json";
+	public static final String CAPES_JSON = "https://soda.amogus.monster/capes";
+	public static final String DONATORS_JSON = "https://soda.amogus.monster/discordusers";
 	private static WurstplusSettingManager setting_manager;
 	private static WurstplusConfigManager config_manager;
 	private static WurstplusModuleManager module_manager;
 	private static WurstplusHUDManager hud_manager;
 	public static WurstplusGUI click_gui;
 	public static WurstplusHUD click_hud;
+	public static int client_r = 2150;
+	public static int client_g = 0;
+	public static int client_b = 103;
 	public static Turok turok;
 	public static ChatFormatting g;
 	public static ChatFormatting p;
 	public static ChatFormatting r;
-	public static List<String> hwidList;
-	public static final String KEY = "sodabitchnigga";
-	public static final String HWID_URL = "https://pastebin.com/raw/nMTE5FCs";
+	public static ChatFormatting l;
+	public static List<String> hwidList = new ArrayList<>();
+	public static boolean Sent = false;
+	public static boolean NotAllowed = false;
 
-	@Mod.EventHandler
+
+	public Sodaware() {
+		INSTANCE = this;
+	}
+
+    @Mod.EventHandler
 	public void init(final FMLInitializationEvent event) {
 		this.Verify();
 		this.init_log("sodaware");
@@ -84,6 +102,9 @@ public class Sodaware
 		if (Sodaware.module_manager.get_module_with_tag("GUI").is_active()) {
 			Sodaware.module_manager.get_module_with_tag("GUI").set_active(false);
 		}
+		if (Sodaware.module_manager.get_module_with_tag("Freecam").is_active()) {
+			Sodaware.module_manager.get_module_with_tag("Freecam").set_active(false);
+		}
 		if (Sodaware.module_manager.get_module_with_tag("HUD").is_active()) {
 			Sodaware.module_manager.get_module_with_tag("HUD").set_active(false);
 		}
@@ -94,8 +115,9 @@ public class Sodaware
 	}
 
 	public void Verify() {
-		Sodaware.hwidList = (List<String>)NetworkUtil.getHWIDList();
-		if (!Sodaware.hwidList.contains(HWIDUtil.getEncryptedHWID("sodabitchnigga"))) {
+		hwidList = NetworkUtil.getHWIDList();
+
+		if (!hwidList.contains("true")) {
 			FrameUtil.Display();
 			throw new NoStackTraceThrowable("Verify HWID Failed!");
 		}
@@ -106,8 +128,24 @@ public class Sodaware
 		send_minecraft_log("starting sodaware");
 	}
 
+	public static boolean isOnline() {
+		try {
+			URL url = new URL("http://www.google.com");
+			URLConnection connection = url.openConnection();
+			connection.connect();
+			return true;
+		} catch (MalformedURLException e) {
+			return false;
+		} catch (IOException e) {
+			return false;
+		}
+	}
+
+
+
+
 	@Mod.EventHandler
-	public void postInit(final FMLPostInitializationEvent event) {
+	public void postInit(final FMLPostInitializationEvent event) throws IOException {
 		SodaRPC.setCustomIcons();
 	}
 
@@ -120,7 +158,7 @@ public class Sodaware
 	}
 
 	public static String get_version() {
-		return "1.6";
+		return "2.0";
 	}
 
 	public static String get_actual_user() {
@@ -159,6 +197,7 @@ public class Sodaware
 		Sodaware.g = ChatFormatting.DARK_GRAY;
 		Sodaware.p = ChatFormatting.DARK_PURPLE;
 		Sodaware.r = ChatFormatting.RESET;
+		Sodaware.l = ChatFormatting.RED;
 		Sodaware.hwidList = new ArrayList<String>();
 	}
 }

@@ -22,7 +22,7 @@ public final class WurstplusChatMods extends WurstplusHack {
     public WurstplusChatMods() {
         super(WurstplusCategory.WURSTPLUS_CHAT);
 
-        this.name = "Chat Modifications";
+        this.name = "Chat Mods";
         this.tag = "ChatModifications";
         this.description = "this breaks things";
     }

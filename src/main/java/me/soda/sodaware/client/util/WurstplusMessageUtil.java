@@ -44,7 +44,7 @@ public class WurstplusMessageUtil {
 
 	public static void client_message_simple(String message) {
 		if (mc.player != null) {
-			final ITextComponent itc = new TextComponentString(message).setStyle(new Style().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString("frank alachi"))));
+			final ITextComponent itc = new TextComponentString(message).setStyle(new Style().setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new TextComponentString(":3"))));
 			mc.ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(itc, 5936);
 		}
 	}

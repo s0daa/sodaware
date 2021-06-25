@@ -1,13 +1,19 @@
 package me.soda.sodaware.client.auth;
 
 import me.soda.sodaware.Sodaware;
+import java.awt.event.ActionEvent;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class FrameUtil {
+
+    public static final String KEY = "sodabitchnigga";
 
     public static void Display() {
         Frame frame = new Frame();
@@ -21,8 +27,9 @@ public class FrameUtil {
             this.setTitle("Verify Failed");
             this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
             this.setLocationRelativeTo(null);
-            copyToClipboard(HWIDUtil.getEncryptedHWID(Sodaware.KEY));
-            String message = "You are not allowed to use this" + "\n" + "HWID: " + HWIDUtil.getEncryptedHWID(Sodaware.KEY) + "\n(Copied to clipboard)";
+
+            copyToClipboard(HWIDUtil.getEncryptedHWID(KEY));
+            String message = "You are not allowed to use this";
             JOptionPane.showMessageDialog(this, message, "Verify Failed", JOptionPane.PLAIN_MESSAGE, UIManager.getIcon("OptionPane.warningIcon"));
         }
 

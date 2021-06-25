@@ -21,11 +21,8 @@ public class WurstplusMixinAbstractClientPlayer {
     public void getCape(CallbackInfoReturnable<ResourceLocation> callbackInfo) {
         if (Capes.INSTANCE == null)
             return;
-        if ((callbackInfo.getReturnValue() != null))
+        if ((!Capes.overrideOtherCapes && callbackInfo.getReturnValue() != null))
             return;
-        // This is weird with a capital W.
-        // Essentially, the "mixin class" content is actually aliased over to the actual target class.
-        // But that's a runtime thing, so the Java Compiler doesn't know anything about this.
         ResourceLocation sodaCape = Capes.getCapeResource((AbstractClientPlayer) (Object) this);
         if (sodaCape != null)
             callbackInfo.setReturnValue(sodaCape);

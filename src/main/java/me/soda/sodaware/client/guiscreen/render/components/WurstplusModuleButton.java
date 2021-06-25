@@ -69,7 +69,7 @@ public class WurstplusModuleButton {
 
 		this.master_height_cache = master.get_height();
 
-		this.settings_height = this.y + 10;
+		this.settings_height = this.y + 12;
 
 		this.count = 0;
 
@@ -110,9 +110,9 @@ public class WurstplusModuleButton {
 		int size = Sodaware.get_setting_manager().get_settings_with_hack(module).size();
 
 		if (this.count >= size) {
-			this.widget.add(new WurstplusButtonBind(master, this, "bind", this.settings_height));
+			this.widget.add(new WurstplusButtonBind(master, this, "bind", this.settings_height+1));
 
-			this.settings_height += 10;
+			this.settings_height += 12;
 		}
 	}
 

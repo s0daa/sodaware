@@ -34,14 +34,14 @@ public class WurstplusFrame {
 
 	private int move_x;
 	private int move_y;
-	
+
 	private boolean can;
 
 	private final Minecraft mc = Minecraft.getMinecraft();
 
 	public WurstplusFrame(WurstplusCategory category) {
-		this.x = 10;
-		this.y = 10;
+		this.x = 12;
+		this.y = 12;
 
 		this.width  = 100;
 		this.height = 27;
@@ -72,9 +72,9 @@ public class WurstplusFrame {
 			count++;
 
 			if (count >= size) {
-				this.height += 10;
+				this.height += 12;
 			} else {
-				this.height += 17;
+				this.height += 19;
 			}
 		}
 
@@ -84,7 +84,7 @@ public class WurstplusFrame {
 
 	public void refresh_frame(WurstplusModuleButton button, int combo_height) {
 
-		this.height = 25;
+		this.height = 27;
 
 		int size  = Sodaware.get_hack_manager().get_modules_with_category(this.category).size();
 		int count = 0;
@@ -96,13 +96,13 @@ public class WurstplusFrame {
 
 			int compare;
 			if (count >= size) {
-				compare = 10;
+				compare = 12;
 			} else {
-				compare = 17;
+				compare = 19;
 			}
 
 			if (buttons.is_open()) {
-				if (compare == 10) {
+				if (compare == 12) {
 					this.height += buttons.get_settings_height() - compare;
 				} else {
 					this.height += buttons.get_settings_height();
@@ -218,7 +218,6 @@ public class WurstplusFrame {
 		}
 	}
 
-
 	public boolean is_binding() {
 		boolean value_requested = false;
 
@@ -257,7 +256,7 @@ public class WurstplusFrame {
 
 	public void render(int mx, int my) {
 		float[] tick_color = {
-			(System.currentTimeMillis() % (360 * 32)) / (360f * 32)
+				(System.currentTimeMillis() % (360 * 32)) / (360f * 32)
 		};
 
 		int color_a = Color.HSBtoRGB(tick_color[0], 1, 1);
@@ -285,20 +284,21 @@ public class WurstplusFrame {
 		this.frame_name = this.category.get_name();
 		this.width_name = font.get_string_width(this.category.get_name());
 
-		WurstplusDraw.draw_rect(this.x, this.y, this.x + this.width, this.y + this.height, bg_r, bg_g, bg_b, bg_a);
-		int border_size = 1;
-		WurstplusDraw.draw_rect(this.x - 1, this.y, this.width + 1, this.height, bd_r, bd_g, bd_b, bd_a, border_size, "left-right");
-
-		WurstplusDraw.draw_string(this.frame_name, this.x + 4, this.y + 4, nc_r, nc_g, nc_b, nc_a);
-
 		if (is_moving()) {
 			crush(mx, my);
 		}
 
-		for (WurstplusModuleButton buttons : this.module_button) {
-			buttons.set_x(this.x + 2);
+		WurstplusDraw.draw_rect(this.x, this.y, this.x + this.width, this.y + this.height, bg_r, bg_g, bg_b, bg_a);
+		int border_size = 2;
+		WurstplusDraw.draw_rect(this.x - 1, this.y, this.width + 1, this.height, bd_r, bd_g, bd_b, bd_a, border_size, "left-right");
 
-			buttons.render(mx, my, 2);
+		//WurstplusDraw.draw_string(this.frame_name, this.x + 4, this.y + 4, nc_r, nc_g, nc_b, nc_a);
+		WurstplusDraw.draw_string(this.frame_name, this.width / 2 - mc.fontRenderer.getStringWidth(this.frame_name) / 2 + this.x, this.y + 4, nc_r, nc_g, nc_b, nc_a);
+
+		for (WurstplusModuleButton buttons : this.module_button) {
+			buttons.set_x(this.x + 6);
+
+			buttons.render(mx, my, 6);
 		}
 
 		tick_color[0] += 1;

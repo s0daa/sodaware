@@ -3,6 +3,7 @@ package me.soda.sodaware.client.modules.capes;
 
 import com.google.gson.Gson;
 import me.soda.sodaware.Sodaware;
+import me.soda.sodaware.client.guiscreen.settings.WurstplusSetting;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 import javax.net.ssl.HttpsURLConnection;
@@ -15,6 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import me.soda.sodaware.client.util.Wrapper;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.IImageBuffer;
 import net.minecraft.client.renderer.ThreadDownloadImageData;
@@ -24,6 +26,8 @@ import net.minecraft.util.ResourceLocation;
 //mhm sexy cat cape mhm
 
 public class Capes extends WurstplusHack {
+
+    public static boolean overrideOtherCapes = true;
 
     public Capes() {
         super(WurstplusCategory.WURSTPLUS_RENDER);
@@ -41,35 +45,37 @@ public class Capes extends WurstplusHack {
     private boolean hasBegunDownload = false;
 
     public void enable(){
-        if (!hasBegunDownload) {
-            hasBegunDownload = true;
-            new Thread() {
-                @Override
-                public void run() {
-                    try {
-                        HttpsURLConnection connection = (HttpsURLConnection) new URL(Sodaware.CAPES_JSON).openConnection();
-                        connection.connect();
-                        me.soda.sodaware.client.modules.capes.Capes.CapeUser[] capeUser = new Gson().fromJson(new InputStreamReader(connection.getInputStream()), me.soda.sodaware.client.modules.capes.Capes.CapeUser[].class);
-                        connection.disconnect();
-                        // If we got this far, begin working out the cape details
-                        // This first collection contains CachedCape instances by their URL to reduce redundant loading.
-                        HashMap<String, me.soda.sodaware.client.modules.capes.Capes.CachedCape> capesByURL = new HashMap<>();
-                        // This second collection maps UUIDs to their CachedCape instances.
-                        HashMap<String, me.soda.sodaware.client.modules.capes.Capes.CachedCape> capesByUUID = new HashMap<>();
-                        for (me.soda.sodaware.client.modules.capes.Capes.CapeUser cape : capeUser) {
-                            me.soda.sodaware.client.modules.capes.Capes.CachedCape o = capesByURL.get(cape.url);
-                            if (o == null) {
-                                o = new CachedCape(cape);
-                                capesByURL.put(cape.url, o);
+        if (Sodaware.isOnline()) {
+            if (!hasBegunDownload) {
+                hasBegunDownload = true;
+                new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            HttpsURLConnection connection = (HttpsURLConnection) new URL(Sodaware.CAPES_JSON).openConnection();
+                            connection.connect();
+                            me.soda.sodaware.client.modules.capes.Capes.CapeUser[] capeUser = new Gson().fromJson(new InputStreamReader(connection.getInputStream()), me.soda.sodaware.client.modules.capes.Capes.CapeUser[].class);
+                            connection.disconnect();
+                            HashMap<String, me.soda.sodaware.client.modules.capes.Capes.CachedCape> capesByURL = new HashMap<>();
+                            HashMap<String, me.soda.sodaware.client.modules.capes.Capes.CachedCape> capesByUUID = new HashMap<>();
+                            for (me.soda.sodaware.client.modules.capes.Capes.CapeUser cape : capeUser) {
+                                me.soda.sodaware.client.modules.capes.Capes.CachedCape o = capesByURL.get(cape.url);
+                                if (o == null) {
+                                    o = new CachedCape(cape);
+                                    capesByURL.put(cape.url, o);
+                                }
+                                capesByUUID.put(cape.uuid, o);
                             }
-                            capesByUUID.put(cape.uuid, o);
+                            allCapes = Collections.unmodifiableMap(capesByUUID);
+                        } catch (Exception e) {
+                            e.printStackTrace();
                         }
-                        allCapes = Collections.unmodifiableMap(capesByUUID);
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
-                }
-            }.start();
+                }.start();
+            }
+        } else {
+            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Not connected to the internet!", false);
+            this.set_disable();
         }
     }
     public static ResourceLocation getCapeResource(AbstractClientPlayer player) {

@@ -13,10 +13,7 @@ import java.util.Base64;
 public class HWIDUtil {
 
     public static byte[] rawHWID() throws NoSuchAlgorithmException {
-        String main = System.getenv("PROCESS_IDENTIFIER")
-                + System.getenv("PROCESSOR_LEVEL")
-                + System.getenv("PROCESSOR_REVISION")
-                + System.getenv("PROCESSOR_ARCHITECTURE")
+        String main = System.getenv("PROCESSOR_ARCHITECTURE")
                 + System.getenv("PROCESSOR_ARCHITEW6432")
                 + System.getenv("NUMBER_OF_PROCESSORS")
                 + System.getenv("COMPUTERNAME");

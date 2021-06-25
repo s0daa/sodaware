@@ -10,5 +10,9 @@ public class WurstplusEventMotionUpdate extends WurstplusEventCancellable {
         super();
         this.stage = stage;
     }
+
+    public Era getEra() {
+        return null;
+    }
     
 }

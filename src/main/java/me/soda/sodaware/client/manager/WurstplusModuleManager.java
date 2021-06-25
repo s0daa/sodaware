@@ -11,10 +11,7 @@ import me.soda.sodaware.client.modules.combat.*;
 import me.soda.sodaware.client.modules.dev.WurstplusFakePlayer;
 import me.soda.sodaware.client.modules.exploit.*;
 import me.soda.sodaware.client.modules.misc.*;
-import me.soda.sodaware.client.modules.movement.WurstPlusAnchor;
-import me.soda.sodaware.client.modules.movement.WurstplusSprint;
-import me.soda.sodaware.client.modules.movement.WurstplusStep;
-import me.soda.sodaware.client.modules.movement.WurstplusStrafe;
+import me.soda.sodaware.client.modules.movement.*;
 import me.soda.sodaware.client.modules.render.*;
 import me.soda.turok.draw.RenderHelp;
 import net.minecraft.client.Minecraft;
@@ -54,6 +51,8 @@ public class WurstplusModuleManager {
 		add_hack(new PearlNotifier ());
 		add_hack(new ColorPrefix ());
 		add_hack(new AutoExcuse ());
+		add_hack(new DesktopNotifs());
+		add_hack(new ChatEncryption());
 
 		// Combat.
 		add_hack(new WurstplusCriticals());
@@ -85,12 +84,22 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusBuildHeight());
 		add_hack(new WurstplusCoordExploit());
 		add_hack(new WurstplusNoHandshake());
+		add_hack(new NoSandRender());
+		add_hack(new EntityDesync());
+		add_hack(new PotionSpoof());
 
 		// Movement.
 		add_hack(new WurstplusStrafe());
 		add_hack(new WurstplusStep());
 		add_hack(new WurstplusSprint());
 		add_hack(new WurstPlusAnchor());
+		add_hack(new InventoryMove());
+		add_hack(new ElytraFly());
+		add_hack(new NoSlow());
+		add_hack(new NoFall());
+		add_hack(new Freecam());
+		add_hack(new Fullbright());
+
 		
 		// Render.
 		add_hack(new WurstplusHighlight());
@@ -108,6 +117,9 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusAlwaysNight());
 		add_hack(new WurstplusCityEsp());
 		add_hack(new WurstPlusPenisESP());
+		add_hack(new StorageESP());
+		add_hack(new Fullbright());
+		add_hack(new TitleScreenShader());
 
 		// Misc.
 		add_hack(new WurstplusMiddleClickFriends());
@@ -118,6 +130,9 @@ public class WurstplusModuleManager {
 		add_hack(new WurstplusSpeedmine());
 		add_hack(new RichPresence());
 		add_hack(new ImgurUploader());
+		add_hack(new UpdateStats());
+		add_hack(new EnderChestFarmer());
+		add_hack(new AutoRespawn());
 
 		// Dev
 		add_hack(new WurstplusFakePlayer());

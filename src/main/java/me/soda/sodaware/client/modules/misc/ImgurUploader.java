@@ -1,9 +1,11 @@
 package me.soda.sodaware.client.modules.misc;
 
 
+import me.soda.sodaware.Sodaware;
 import me.soda.sodaware.client.modules.WurstplusCategory;
 import me.soda.sodaware.client.modules.WurstplusHack;
 import me.soda.sodaware.client.util.KeyInputUpload;
+import net.minecraft.client.Minecraft;
 import org.lwjgl.input.Keyboard;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,8 +29,13 @@ public class ImgurUploader extends WurstplusHack {
     public static KeyBinding screenShot;
 
     public void enable() {
-                screenShot = new KeyBinding("key.imgurshot", Keyboard.KEY_F2, "key.categories.imgurmod");
-                MinecraftForge.EVENT_BUS.register(new KeyInputUpload(screenShot));
-                ClientRegistry.registerKeyBinding(screenShot);
+        if (Sodaware.isOnline()) {
+            screenShot = new KeyBinding("key.imgurshot", Keyboard.KEY_F2, "key.categories.imgurmod");
+            MinecraftForge.EVENT_BUS.register(new KeyInputUpload(screenShot));
+            ClientRegistry.registerKeyBinding(screenShot);
+        } else {
+            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Not connected to the internet!", false);
+            this.set_disable();
+        }
     }
 }
