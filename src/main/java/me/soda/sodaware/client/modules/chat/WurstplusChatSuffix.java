@@ -51,12 +51,12 @@ public class WurstplusChatSuffix extends WurstplusHack {
 	String[] random_client_finish = {
 		" plus",
 		" epic",
-		"god",
+		" god",
 		" sex",
 		" blue",
 		" brown",
 		" gay",
-		"plus",
+		" plus",
 		""
 	};
 

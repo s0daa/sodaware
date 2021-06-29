@@ -39,7 +39,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 //mhm place crystal on feet mhm so goodnngs
 
-public class WurstplusAutoCrystal extends WurstplusHack {
+public class    WurstplusAutoCrystal extends WurstplusHack {
 
     public WurstplusAutoCrystal() {
         super(WurstplusCategory.WURSTPLUS_COMBAT);
@@ -79,8 +79,8 @@ public class WurstplusAutoCrystal extends WurstplusHack {
     WurstplusSetting anti_stuck = create("Anti Stuck", "CaAntiStuck", false);
     WurstplusSetting endcrystal = create("1.13 Mode", "CaThirteen", false);
 
-    WurstplusSetting faceplace_mode = create("Tabbott Mode", "CaTabbottMode", true);
-    WurstplusSetting faceplace_mode_damage = create("T Health", "CaTabbottModeHealth", 8, 0, 36);
+    WurstplusSetting faceplace_mode = create("Faceplace Mode", "CaTabbottMode", true);
+    WurstplusSetting faceplace_mode_damage = create("Min Health", "CaTabbottModeHealth", 8, 0, 36);
 
     WurstplusSetting fuck_armor_mode = create("Armor Destroy", "CaArmorDestory", true);
     WurstplusSetting fuck_armor_mode_precent = create("Armor %", "CaArmorPercent", 25, 0, 100);

@@ -52,6 +52,11 @@ public class WurstplusAutoGroom extends WurstplusHack {
         chants.add("Are you 15 and under?");
         chants.add("Dont tell anyone about this ;3");
         chants.add("Do you like boys or girls? :3");
+        chants.add("Can you meow for me?");
+        chants.add("Do u own thigh highs?");
+        chants.add("Do you know what sex is?");
+        chants.add("I cant wait to smell you uwu");
+
 
     }
 

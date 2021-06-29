@@ -110,10 +110,10 @@ public class WurstplusAutoEz extends WurstplusHack {
         if (custom.get_value(true)) {
             message += WurstplusEzMessageUtil.get_message().replace("[", "").replace("]", "");
         } else {
-            message += "sodaware :eyes_heart:";
+            message += "sodaware >:3";
         }
         if (discord.get_value(true)) {
-            message += "femboy.site/neko";
+            message += "discord.gg/yTgTXCVNBr";
         }
         mc.player.connection.sendPacket(new CPacketChatMessage(message));
     }
