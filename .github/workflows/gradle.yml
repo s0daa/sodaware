@@ -20,6 +20,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: client
-          path: build/libs/
+          path: build/libs/*-all.jar
       - name: Cleanup Gradle Cache
         run: rm -rf ~/.gradle/caches/
