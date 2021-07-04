@@ -61,7 +61,7 @@ class AutoExcuse
                 AutoExcuse.mc.player.sendChatMessage ( "my monitor was off" );
             }
             if ( n == 11 ) {
-                AutoExcuse.mc.player.sendChatMessage ( "i was too busy jerking off to yiff and femboy porn -perry" );
+                AutoExcuse.mc.player.sendChatMessage ( "i was tabbed out :c" );
             }
             this.diedTime = 0;
         }
