@@ -34,7 +34,7 @@ public class ImgUploader implements Runnable {
 
     public void run() {
         if(Sodaware.isOnline()){
-            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Uploading image...", true);
+            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("uploading...", true);
 
             try {
                 JsonElement jelement = new JsonParser().parse(getImgurContent("22835aafce1a83e",img));
@@ -45,15 +45,15 @@ public class ImgUploader implements Runnable {
                 Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(selection, selection);
 
-                Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Copied to clipboard!", false);
+                Minecraft.getMinecraft().ingameGUI.setOverlayMessage("copied to clipboard :D", false);
 
             }
             catch(Exception e) {
                 e.printStackTrace();
-                WurstplusMessageUtil.send_client_message("Upload FAILED bitch!");
+                WurstplusMessageUtil.send_client_message("upload failed :c");
             }
         } else {
-            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("Not connected to the internet!", false);
+            Minecraft.getMinecraft().ingameGUI.setOverlayMessage("you're not connected to the internet...", false);
         }
 
     }
