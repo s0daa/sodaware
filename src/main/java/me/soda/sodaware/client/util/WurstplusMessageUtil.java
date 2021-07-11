@@ -35,7 +35,7 @@ public class WurstplusMessageUtil {
 			}			
 		} else {
 			if (module.get_tag().equals("AutoCrystal")) {
-				client_message_simple(opener + "Autocrystal" + ChatFormatting.RED + " disabled" + r + ":3");
+				client_message_simple(opener + "Autocrystal" + ChatFormatting.RED + " disabled" + r + " :3");
 			} else {
 				client_message_simple(opener + r + module.get_name() + ChatFormatting.RED + " Disabled");
 			}
