@@ -40,7 +40,7 @@ public class Sodaware
 	@Mod.Instance
 	private static Sodaware MASTER;
 	public static final String WURSTPLUS_NAME = "sodaware";
-	public static final String WURSTPLUS_VERSION = "2.0";
+	public static final String WURSTPLUS_VERSION = "2.1";
 	public static final String WURSTPLUS_SIGN = " ";
 	public static final int WURSTPLUS_KEY_GUI = 54;
 	public static final int WURSTPLUS_KEY_DELETE = 211;

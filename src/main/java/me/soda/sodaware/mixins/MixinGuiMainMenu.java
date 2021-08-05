@@ -39,8 +39,8 @@ public abstract class MixinGuiMainMenu extends GuiScreen {
         int i = height / 4 + 48;
         this.buttonList.add(new GuiButton(932, 5, 150, 98, 20, "2b2tpvp.net"));
         this.buttonList.add(new GuiButton(284, 5, 174, 98, 20, "2b2t.org"));
-        this.buttonList.add(new GuiButton(953, 5, 198, 98, 20, "test.2b2t"));
-        this.buttonList.add(new GuiButton(991, 5, 222, 98, 20, "5b5t.org"));
+        this.buttonList.add(new GuiButton(953, 5, 198, 98, 20, "eu cc"));
+        this.buttonList.add(new GuiButton(991, 5, 222, 98, 20, "us cc"));
         Sodaware.initTime = System.currentTimeMillis();
     }
 
@@ -53,10 +53,10 @@ public abstract class MixinGuiMainMenu extends GuiScreen {
             this.mc.displayGuiScreen(new GuiConnecting(this, mc, "2b2t.org", 25565));
         }
         if(button.id == 953) {
-            this.mc.displayGuiScreen(new GuiConnecting(this, mc, "test.2b2t.org", 25565));
+            this.mc.displayGuiScreen(new GuiConnecting(this, mc, "eu.crystalpvp.cc", 25565));
         }
         if(button.id == 991) {
-            this.mc.displayGuiScreen(new GuiConnecting(this, mc, "5b5t.org", 25565));
+            this.mc.displayGuiScreen(new GuiConnecting(this, mc, "us.crystalpvp.cc", 25565));
         }
     }
 

@@ -63,7 +63,7 @@ public class SodaRPC {
                         }
                     } else {
                         details = "sodaware | main menu";
-                        state = "prolly jerking off";
+                        state = "hi";
                     }
                     presence.details = details;
                     presence.state = state;
