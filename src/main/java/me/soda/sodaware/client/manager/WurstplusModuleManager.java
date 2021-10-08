@@ -98,7 +98,7 @@ public class WurstplusModuleManager {
 		add_hack(new NoSlow());
 		add_hack(new NoFall());
 		add_hack(new Freecam());
-		add_hack(new Fullbright());
+		//add_hack(new Fullbright());
 
 		
 		// Render.
