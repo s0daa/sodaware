@@ -8,7 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ServerData;
 
 public class SodaRPC {
-    private static final String ClientId = "886882827893878814";
+    private static final String ClientId = "851865852847980563";
     private static final Minecraft mc = Minecraft.getMinecraft();
     private static final DiscordRPC rpc = DiscordRPC.INSTANCE;
     public static DiscordRichPresence presence = new DiscordRichPresence();
