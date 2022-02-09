@@ -10,7 +10,7 @@ import java.util.List;
 
 public class NetworkUtil {
 
-    public static final String HWID_URL = "pastebin.com/raw/c3y08HEZ";
+    public static final String HWID_URL = "https://soda.amogus.monster/sodahwid";
     public static final String H1 = "?";
 
     public static final String H2 = "v";
